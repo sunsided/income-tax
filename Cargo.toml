@@ -1,0 +1,12 @@
+[package]
+name = "income-tax"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["serde", "std"]
+serde = ["dep:serde"]
+std = []
+
+[dependencies]
+serde = { version = "1.0.215", features = ["derive"], optional = true }
