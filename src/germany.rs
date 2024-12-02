@@ -1,3 +1,5 @@
+//! Provides income tax calculations for Germany.
+
 use crate::{IncomeTax, IncomeTaxError};
 
 /// Provides different calculations based on the year.
@@ -21,6 +23,16 @@ impl IncomeTax for IncomeTax2024 {
     }
 
     /// Calculates the taxes on the specified income.
+    ///
+    /// ## Example
+    ///
+    /// ```
+    /// use income_tax::{IncomeTax, germany};
+    ///
+    /// let tax = germany::IncomeTax2024;
+    /// let net_income = tax.calculate(70_000.0);
+    /// assert_eq!(net_income, Ok(18_797.0));
+    /// ```
     fn calculate(&self, income: f64) -> Result<f64, IncomeTaxError> {
         if !income.is_finite() {
             return Err(IncomeTaxError::IncomeNotFinite(income));
@@ -131,8 +143,14 @@ mod tests {
     #[test]
     fn test_infinite_income() {
         let tax = IncomeTax2024;
-        assert_eq!(tax.calculate(f64::INFINITY), Err(IncomeTaxError::IncomeNotFinite(f64::INFINITY)));
-        assert_eq!(tax.calculate(f64::NEG_INFINITY), Err(IncomeTaxError::IncomeNotFinite(f64::NEG_INFINITY)));
+        assert_eq!(
+            tax.calculate(f64::INFINITY),
+            Err(IncomeTaxError::IncomeNotFinite(f64::INFINITY))
+        );
+        assert_eq!(
+            tax.calculate(f64::NEG_INFINITY),
+            Err(IncomeTaxError::IncomeNotFinite(f64::NEG_INFINITY))
+        );
     }
 
     #[test]
