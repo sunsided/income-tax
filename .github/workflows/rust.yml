@@ -13,23 +13,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Check formatting
-        run: cargo fmt --check
-      - name: Build
-        run: cargo build
-      - name: Run tests (no default features)
-        run: cargo test --verbose --no-default-features
-      - name: Run tests (all features)
-        run: cargo test --verbose --all-features
-      - name: Run doctests (no default features)
-        run: cargo test --doc --verbose --no-default-features
-      - name: Run doctests (all features)
-        run: cargo test --doc --verbose --all-features
-      - name: Build docs (no default features)
-        run: cargo doc --all-features
-      - name: Build docs (all features)
-        run: cargo doc --all-features
+    - uses: actions/checkout@v4
+    - name: Check formatting
+      run: cargo fmt --check
+    - name: Build
+      run: cargo build
+    - name: Run tests (no default features)
+      run: cargo test --verbose --no-default-features
+    - name: Run tests (all features)
+      run: cargo test --verbose --all-features
+    - name: Run doctests (no default features)
+      run: cargo test --doc --verbose --no-default-features
+    - name: Run doctests (all features)
+      run: cargo test --doc --verbose --all-features
+    - name: Build docs (no default features)
+      run: cargo doc --all-features
+    - name: Build docs (all features)
+      run: cargo doc --all-features
 
   codecov:
     name: Code Coverage

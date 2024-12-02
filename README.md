@@ -1,5 +1,12 @@
 # Income Tax Calculation
 
+[![Crates.io](https://img.shields.io/crates/v/income-tax-rs)](https://crates.io/crates/income-tax-rs)
+[![Crates.io](https://img.shields.io/crates/l/income-tax-rs)](https://crates.io/crates/income-tax-rs)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sunsided/rust-aligned-allocations/rust.yml)](https://github.com/sunsided/fixedstack-rs/actions/workflows/rust.yml)
+[![Safety Dance][safety-image]][safety-link]
+[![docs.rs](https://img.shields.io/docsrs/income-tax-rs)](https://docs.rs/income-tax-rs/)
+[![codecov](https://codecov.io/gh/sunsided/income-tax-rs/graph/badge.svg?token=7KOXJwVQqi)](https://codecov.io/gh/sunsided/income-tax-rs)
+
 This Rust crate provides functionality for income tax calculation in different years.
 It is currently aimed at German income tax but is welcome to additions for different
 countries and years.
@@ -17,3 +24,7 @@ fn germany_2024() {
     assert_eq!(refund, Ok(20_491.0));
 }
 ```
+
+[safety-image]: https://img.shields.io/badge/unsafe-forbidden-success.svg
+
+[safety-link]: https://github.com/rust-secure-code/safety-dance/
