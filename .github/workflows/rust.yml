@@ -2,9 +2,21 @@ name: Rust
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - "main"
+    paths:
+      - 'Cargo.toml'
+      - '.config/**'
+      - 'src/**'
+      - '.github/workflows/rust.yml'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - "main"
+    paths:
+      - 'Cargo.toml'
+      - '.config/**'
+      - 'src/**'
+      - '.github/workflows/rust.yml'
 
 env:
   CARGO_TERM_COLOR: always
