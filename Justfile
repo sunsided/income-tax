@@ -17,3 +17,7 @@ test:
 # Builds and opens the documenation
 doc:
     cargo doc --open
+
+# Runs code coverage
+codecov PROFILE="ci":
+    cargo llvm-cov nextest --all-features --lcov --output-path lcov.info "--profile={{ PROFILE }}"
