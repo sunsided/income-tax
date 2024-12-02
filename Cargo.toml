@@ -4,7 +4,7 @@ description = "Income tax calculations"
 authors = ["Markus Mayer <widemeadows@gmail.com>"]
 license = "EUPL-1.2"
 readme = "README.md"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 keywords = ["tax", "income-tax"]
 categories = ["mathematics", "finance"]
@@ -12,7 +12,7 @@ homepage = "https://github.com/sunsided/income-tax-rs"
 repository = "https://github.com/sunsided/income-tax-rs"
 
 [features]
-default = ["serde", "std"]
+default = ["std"]
 serde = ["dep:serde"]
 std = []
 
