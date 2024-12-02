@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2024-12-02
+
+[0.2.0]: https://github.com/sunsided/income-tax-rs/releases/tag/v0.2.0
+
+### Added
+
+- Added an implementation of `IncomeTax` for `germany::IncomeTaxType`.
+
 ## [0.1.2] - 2024-12-02
 
 [0.1.2]: https://github.com/sunsided/income-tax-rs/releases/tag/v0.1.2

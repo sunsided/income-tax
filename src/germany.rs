@@ -12,6 +12,26 @@ pub enum IncomeTaxType {
     IncomeTax2024(IncomeTax2024),
 }
 
+impl IncomeTax for IncomeTaxType {
+    fn year(&self) -> u32 {
+        match self {
+            IncomeTaxType::IncomeTax2024(tax) => tax.year(),
+        }
+    }
+
+    fn calculate(&self, income: f64) -> Result<f64, IncomeTaxError> {
+        match self {
+            IncomeTaxType::IncomeTax2024(tax) => tax.calculate(income),
+        }
+    }
+
+    fn tax_refund(&self, income_before: f64, income_after: f64) -> Result<f64, IncomeTaxError> {
+        match self {
+            IncomeTaxType::IncomeTax2024(tax) => tax.tax_refund(income_before, income_after),
+        }
+    }
+}
+
 /// Configuration for income taxes according to § 32a EStG (2024).
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Deserialize, serde::Serialize))]
