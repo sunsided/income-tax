@@ -1,10 +1,10 @@
 # Income Tax Calculation
 
-[![Crates.io](https://img.shields.io/crates/v/income-tax-rs)](https://crates.io/crates/income-tax-rs)
-[![Crates.io](https://img.shields.io/crates/l/income-tax-rs)](https://crates.io/crates/income-tax-rs)
+[![Crates.io](https://img.shields.io/crates/v/income-tax)](https://crates.io/crates/income-tax)
+[![Crates.io](https://img.shields.io/crates/l/income-tax)](https://crates.io/crates/income-tax)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sunsided/rust-aligned-allocations/rust.yml)](https://github.com/sunsided/fixedstack-rs/actions/workflows/rust.yml)
 [![Safety Dance][safety-image]][safety-link]
-[![docs.rs](https://img.shields.io/docsrs/income-tax-rs)](https://docs.rs/income-tax-rs/)
+[![docs.rs](https://img.shields.io/docsrs/income-tax)](https://docs.rs/income-tax/)
 [![codecov](https://codecov.io/gh/sunsided/income-tax-rs/graph/badge.svg?token=7KOXJwVQqi)](https://codecov.io/gh/sunsided/income-tax-rs)
 
 This Rust crate provides functionality for income tax calculation in different years.
