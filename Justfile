@@ -14,7 +14,7 @@ test:
     cargo test --doc --all-features
     cargo doc
 
-# Builds and opens the documenation
+# Builds and opens the documentation
 doc:
     cargo doc --open
 
